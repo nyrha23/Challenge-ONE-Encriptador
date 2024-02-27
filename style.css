@@ -54,15 +54,19 @@ header{
     padding: var(--fs-m);
     /*padding-bottom: 0;*/
 }
-.logo{
+.nav{
     top: 0;
     left: 0;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
-.logo h1{
+.nav h1{
     font-size: var(--fs-xx);
 }
-.logo a{
+.nav a{
     text-decoration: none;
 }
 

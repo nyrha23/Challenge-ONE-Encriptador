@@ -18,6 +18,17 @@ const claves = [
 const imgDefault = "img/mishi-quest.png";
 const imgExito = "img/mishi-happy.png";
 
+function mostrarTexto(identidad, texto){
+    let identidadHTML = document.querySelector(identidad);
+    identidadHTML.innerHTML = texto;
+    return;
+}
+function mostrarImagen(identidad, imagen){
+    let identidadHTML = document.querySelector(identidad);
+    identidadHTML.src = imagen;
+    return;
+}
+
 // Encriptación
 function encriptar(textoEncriptado){
     for(let i = 0; i < letras.length; i++){
@@ -29,9 +40,9 @@ function encriptar(textoEncriptado){
         }
     }
     //console.log(textoEncriptado);
-    document.getElementById("imgegreso").src = imgExito;
-    document.getElementById("h2egreso").innerHTML = "Texto encriptado:";
-    document.getElementById("txtegreso").innerHTML = textoEncriptado;
+    mostrarImagen("#imgegreso", imgExito);
+    mostrarTexto("#h2egreso", "Texto encriptado:");
+    mostrarTexto("#txtegreso", textoEncriptado);
     return;
 }
 
@@ -59,9 +70,9 @@ function desencriptar(textoDesencriptado){
         }
     }
     //console.log(textoDesencriptado);
-    document.getElementById("imgegreso").src = imgExito;
-    document.getElementById("h2egreso").innerHTML = "Texto desencriptado:";
-    document.getElementById("txtegreso").innerHTML = textoDesencriptado;
+    mostrarImagen("#imgegreso", imgExito);
+    mostrarTexto("#h2egreso", "Texto desencriptado:");
+    mostrarTexto("#txtegreso", textoDesencriptado);
     return;
 }
 
@@ -84,8 +95,8 @@ function btnCopiar(){
     navigator.clipboard.writeText(textoCopiado);
     alert("¡El texto ha sido copiado!");
     textoIngresado.value = "";
-    document.getElementById("imgegreso").src = imgDefault;
-    document.getElementById("h2egreso").innerHTML = "Ningún mensaje ha sido encontrado";
-    document.getElementById("txtegreso").innerHTML = "Ingrese su texto";
+    mostrarImagen("#imgegreso", imgDefault);
+    mostrarTexto("#h2egreso", "Ningún mensaje ha sido encontrado");
+    mostrarTexto("#txtegreso", "Ingrese su texto");
     return;
 }
