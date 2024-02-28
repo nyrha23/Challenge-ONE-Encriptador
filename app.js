@@ -49,7 +49,7 @@ function encriptar(textoEncriptado){
 function btnEncriptar(){
     let texto = textoIngresado.value;
     if (!/^[a-z]+(\s[a-z]+)*$/.test(texto)){
-        alert("El texto ingresado sólo debe contener letras minúsculas, revise su texto e intente denuevo.");
+        alert("El texto ingresado sólo debe contener letras minúsculas, revise su texto e intente de nuevo.");
         return;
     }
     else{
@@ -79,7 +79,7 @@ function desencriptar(textoDesencriptado){
 function btnDesencriptar(){
     let texto = textoIngresado.value;
     if (!/^[a-z]+(\s[a-z]+)*$/.test(texto)){
-        alert("El texto ingresado sólo debe contener letras minúsculas, revise su texto e intente denuevo.");
+        alert("El texto ingresado sólo debe contener letras minúsculas, revise su texto e intente de nuevo.");
         return;
     }
     else{
